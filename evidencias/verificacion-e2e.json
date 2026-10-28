@@ -1,0 +1,41 @@
+{
+  "practica": "Star Wars",
+  "validacion": "navegador real con OAuth GitHub y Supabase local",
+  "checks": [
+    "OAuth real: sesión autenticada y 82 personajes disponibles después de recargar",
+    "Siete páginas recorridas: 82 registros únicos y límites de navegación correctos",
+    "Detalle completo de Luke; foco atrapado y restaurado; 13 aperturas sin apilar modales",
+    "Búsqueda, resultado vacío y limpieza del filtro comprobados",
+    "Fallo 503 simulado solo en la red del navegador y recuperación con Reintentar",
+    "Galería y detalle móvil; anchos 320, 390 y 768 sin desbordamiento horizontal",
+    "Cierre de sesión, protección tras recargar y nuevo acceso OAuth con autorización existente comprobados"
+  ],
+  "api_real": {
+    "listado": 200,
+    "total": 82,
+    "tamano": 24,
+    "detalle": 200,
+    "planeta": "Tatooine",
+    "inexistente": 404,
+    "parametro_invalido": 400,
+    "sin_sesion": 401
+  },
+  "peticiones_a_swapi_desde_interfaz": 0,
+  "errores_javascript": 0,
+  "rutas_consultadas": [
+    "avatars.githubusercontent.com/u/167296320",
+    "fonts.googleapis.com/css2",
+    "fonts.gstatic.com/s/barlowcondensed/v13/HTx3L3I-JCGChYJ8VI-L6OO_au7B6xHT2g.woff2",
+    "fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3bWuQ.woff2",
+    "fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3bWuQ.woff2",
+    "fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+    "localhost:4310/",
+    "localhost:4310/api/characters",
+    "localhost:4310/api/characters/1",
+    "localhost:4310/api/characters/999999",
+    "localhost:4310/api/config",
+    "localhost:4310/assets/index-DNSf0QRZ.js",
+    "localhost:4310/assets/index-DtnSXgQy.css"
+  ],
+  "resultado": "APROBADO"
+}

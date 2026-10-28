@@ -89,7 +89,14 @@ El tamaño de página admite de 1 a 24 registros. La búsqueda admite hasta 100 
 - Dos importaciones reales: 60 planetas y 82 personajes, sin duplicados.
 - Integridad de la relación de planetas y permisos de lectura/escritura comprobados en PostgreSQL.
 - Pantalla local de acceso capturada en `evidencias/01_acceso_oauth.png`.
-- **Pendiente:** completar acceso OAuth en navegador y validar galería, navegación, detalle y diseño móvil con sesión real.
+- OAuth real de GitHub, persistencia de sesión, cierre y nuevo acceso comprobados en navegador.
+- Siete páginas recorridas: 82 personajes únicos. Búsqueda, detalle completo, estado vacío y recuperación de un fallo 503 comprobados.
+- Modal abierto y cerrado 13 veces, sin duplicación, con control de foco y teclado.
+- Vistas de 320, 390, 768 y 1440 px comprobadas; capturas individuales en `evidencias/`.
+- Ninguna petición a SWAPI desde la interfaz y ningún error JavaScript durante la prueba.
+- API real: respuestas 200, 400, 401 y 404 verificadas con la sesión OAuth.
+
+El archivo `evidencias/verificacion-e2e.json` describe los resultados y distingue el fallo de red simulado de las consultas reales. La aplicación funciona localmente; no se realizó despliegue público.
 
 ```bash
 npm run build
