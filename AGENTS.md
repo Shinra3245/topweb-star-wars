@@ -1,0 +1,1 @@
+Este repositorio contiene exclusivamente la práctica académica Star Wars. Conservar originales externos. No leer, imprimir, copiar ni delegar .env, credenciales ni secretos. No cambiar otros proyectos o contenedores. No ejecutar commits, push ni crear recursos externos como agente delegado; Codex integra y publica. No simular resultados de OAuth o Supabase.
