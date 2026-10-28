@@ -1,0 +1,2 @@
+-- Sin datos ficticios.
+-- Los registros reales se importan directamente desde la API oficial de SWAPI ejecutando 'npm run import'.

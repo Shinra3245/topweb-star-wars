@@ -1,0 +1,58 @@
+# Archivo de configuración de Supabase local para Práctica Star Wars
+project_id = "topweb_starwars"
+
+[api]
+enabled = true
+port = 54341
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54342
+shadow_port = 54340
+major_version = 17
+
+[db.pooler]
+enabled = false
+port = 54349
+pool_mode = "transaction"
+default_pool_size = 20
+max_client_conn = 100
+
+[studio]
+enabled = false
+port = 54343
+
+[inbucket]
+enabled = false
+port = 54344
+
+[storage]
+enabled = false
+
+[auth]
+enabled = true
+site_url = "http://localhost:4310"
+additional_redirect_urls = [
+  "http://localhost:4310/auth/callback",
+  "http://localhost:5310/auth/callback"
+]
+jwt_expiry = 3600
+enable_signup = true
+
+[auth.external.github]
+enabled = true
+client_id = "env(GITHUB_CLIENT_ID)"
+secret = "env(GITHUB_SECRET)"
+redirect_uri = "http://127.0.0.1:54341/auth/v1/callback"
+
+[analytics]
+enabled = false
+port = 54347
+
+[realtime]
+enabled = false
+
+[edge_runtime]
+enabled = false

@@ -1,0 +1,48 @@
+
+> practica-star-wars@1.0.0 test
+> node --test --test-timeout=10000 test/*.test.js
+
+▶ API de Archivo Galáctico
+  ▶ GET /api/health
+    ✔ debe responder 200 con estado ok sin filtrar información sensible (36.48ms)
+  ✔ GET /api/health (36.970222ms)
+  ▶ GET /api/config
+    ✔ debe responder 200 con supabaseUrl y supabaseAnonKey públicas (4.428345ms)
+    ✔ debe responder 503 con mensaje en español cuando falta la configuración (4.373922ms)
+  ✔ GET /api/config (9.033296ms)
+  ▶ Autenticación (401)
+    ✔ debe responder 401 si no se envía la cabecera Authorization (5.142452ms)
+    ✔ debe responder 401 si el esquema no es Bearer (2.335192ms)
+    ✔ debe responder 401 si el token es inválido o expirado (1.736379ms)
+  ✔ Autenticación (401) (9.538156ms)
+  ▶ Validación de Parámetros (400)
+    ✔ debe responder 400 si page no es un entero positivo válido (4.473137ms)
+    ✔ rechaza páginas repetidas y rangos que exceden enteros seguros (3.468069ms)
+    ✔ debe responder 400 si pageSize no está entre 1 y 24 (2.542458ms)
+    ✔ debe responder 400 si q excede los 100 caracteres (1.310296ms)
+    ✔ debe responder 400 si el id en /api/characters/:id no es numérico seguro (1.569508ms)
+  ✔ Validación de Parámetros (400) (13.693291ms)
+  ▶ Listado y Detalle de Personajes (200 y 404)
+    ✔ debe devolver listado paginado con items, total, page, pageSize, totalPages (2.114933ms)
+    ✔ debe filtrar correctamente mediante el parámetro q (1.377271ms)
+    ✔ debe devolver detalle del personaje solicitado por ID (1.234756ms)
+    ✔ debe responder 404 si el personaje no existe (1.158414ms)
+  ✔ Listado y Detalle de Personajes (200 y 404) (6.083882ms)
+  ▶ Manejo de Errores de Base de Datos / Servicios (503)
+    ✔ debe responder 503 sin filtrar errores internos cuando el servicio falla en listado (3.151249ms)
+    ✔ debe responder 503 sin filtrar errores internos cuando el servicio falla en detalle (2.884283ms)
+  ✔ Manejo de Errores de Base de Datos / Servicios (503) (6.189689ms)
+  ▶ Servicio de Frontend y Fallback SPA
+    ✔ debe responder 404 en formato JSON ante rutas de /api inexistentes (2.287624ms)
+    ✔ debe servir el archivo index.html para la raíz / cuando dist existe (3.389363ms)
+    ✔ debe realizar fallback a index.html para rutas SPA como /auth/callback (2.015407ms)
+  ✔ Servicio de Frontend y Fallback SPA (7.874051ms)
+✔ API de Archivo Galáctico (98.408269ms)
+ℹ tests 20
+ℹ suites 8
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 235.647189

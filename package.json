@@ -1,0 +1,27 @@
+{
+  "name": "practica-star-wars",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Práctica académica Star Wars - Archivo Galáctico con OAuth, Supabase, SWAPI, Express y React",
+  "scripts": {
+    "build": "vite build",
+    "start": "node --env-file=.env server.js",
+    "dev": "vite --port 5310",
+    "test": "node --test --test-timeout=10000 test/*.test.js",
+    "import": "node --env-file=.env scripts/import-swapi.mjs",
+    "db:start": "supabase start --exclude realtime,storage-api,imgproxy,mailpit,postgres-meta,studio,edge-runtime,logflare,vector,supavisor",
+    "db:stop": "supabase stop"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "supabase": "^2.12.0",
+    "vite": "^6.2.0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "planetas": 60,
+  "personajes": 82,
+  "personajes_sin_planeta": 0,
+  "ids_personaje_duplicados": 0,
+  "rls_personajes": true,
+  "anon_puede_leer": false,
+  "autenticado_puede_leer": true,
+  "autenticado_puede_insertar": false
+}
